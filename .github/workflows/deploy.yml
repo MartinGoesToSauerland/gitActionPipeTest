@@ -25,8 +25,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install
-      - run: run build
+      #- run: npm install
+      #- run: run build
       - uses: aws-actions/configure-aws-credentials@v1
         with:
            aws-access-kex-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
