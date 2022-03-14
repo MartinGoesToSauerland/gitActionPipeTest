@@ -32,6 +32,7 @@ jobs:
            aws-access-kex-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
            aws-secret-access-key: $ {{ secrets.AWS_SECRET_ACCESS_KEY }}
            aws-region:  eu-west-2
+      - run: aws s3 ls
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
