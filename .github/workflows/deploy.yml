@@ -32,7 +32,8 @@ jobs:
            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
            aws-region:  eu-west-2
-      - run: aws s3 ls
+      #- run: aws s3 ls
+      - run: aws s3 cp dist s3://martins-deployment-testing --recursive
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
